@@ -14,6 +14,10 @@ Repository for daily Bootcamp 2 code challenges.
     ```sh
     > npm i
     ```
+1. Check that tests are setup correctly by running:
+    ```sh
+    > npm test
+    ```
 
 ## Daily Process
 
