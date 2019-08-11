@@ -1,0 +1,28 @@
+{
+  "name": "bc2-code-challenges",
+  "version": "1.0.0",
+  "description": "Code Challenges for Bootcamp 2",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "qunit test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alchemycodelab/bc2-code-challenges.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alchemycodelab/bc2-code-challenges/issues"
+  },
+  "homepage": "https://github.com/alchemycodelab/bc2-code-challenges#readme",
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "esm": "^3.2.25",
+    "jsdom": "^15.1.1",
+    "qunit": "^2.9.2"
+  }
+}
