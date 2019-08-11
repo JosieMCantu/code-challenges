@@ -1,6 +1,6 @@
 # Bootcamp 2 Code Challenges
 
-Repository for Daily Bootcamp 2 Code Challenges.
+Repository for daily Bootcamp 2 code challenges.
 
 ## Initial Setup
 
@@ -19,7 +19,7 @@ Repository for Daily Bootcamp 2 Code Challenges.
 
 ### Setup
 
-Each days problems are in a branch. You will do your work on `master`
+Each days problems are in a branch. You will do your work on `master`:
 
 1. Start by running `git fetch upstream` to make sure you have the latest branches
 1. Make sure you are on `master` (type `git branch` to check)
