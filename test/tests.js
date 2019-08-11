@@ -1,12 +1,7 @@
 const test = QUnit.test;
 
-QUnit.module('Module Name');
+QUnit.module('Test Setup');
 
-test('test name', assert => {
-    // arrange
-    
-    // act
-    
-    // assert
-    assert.equal(true, true);
+test('qunit test runs successfully', assert => {
+    assert.ok(true);
 });
