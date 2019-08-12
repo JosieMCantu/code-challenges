@@ -40,21 +40,21 @@ skip('It should add the number 8 to the array five times', assert => {
   
 skip('It should remove three elements from the array', assert => {
     const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    const result = removeElements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne);
+    const result = removeElements(array, removeOne);
     assert.equal(array, result);
     assert.deepEqual(array, [1, 2, 3, 4, 5, 6, 7]);
 });
   
 skip('It should remove three elements from the array', assert => {
     const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    const result = removeWithForEach([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne);
+    const result = removeWithForEach(array, removeOne);
     assert.equal(array, result);
     assert.deepEqual(array, [1, 2, 3, 4, 5, 6, 7]);
 });
   
 skip('It should remove three elements from the array', assert => {
     const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    const result = removeWithAnon([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    const result = removeWithAnon(array);
     assert.equal(array, result);
     assert.deepEqual(array, [1, 2, 3, 4, 5, 6, 7]);
 });
