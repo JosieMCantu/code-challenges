@@ -28,7 +28,7 @@ Run your tests from the browser using live-server, or console via: npm test
 
 test('It should return the message with all uppercase characters', assert => {
     const result = speaker('hello Bootcamp 2 students!', greeting);
-    assert.equal(result, 'HELLO Bootcamp 2 STUDENTS!');
+    assert.equal(result, 'HELLO BOOTCAMP 2 STUDENTS!');
 });
   
 skip('It should add the number 8 to the array five times', assert => {
