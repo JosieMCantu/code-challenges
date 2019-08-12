@@ -14,6 +14,10 @@ Repository for daily Bootcamp 2 code challenges.
     ```sh
     > npm i
     ```
+1. Create a `dev` branch for doing daily work:
+    ```sh
+    > git checkout -b dev
+    ```
 1. Check that tests are setup correctly by running:
     ```sh
     > npm test
@@ -23,16 +27,17 @@ Repository for daily Bootcamp 2 code challenges.
 
 ### Setup
 
-Each days problems are in a branch. You will do your work on `master`:
+Each days problems are in a branch. You will do your work on `dev`, merging 
+the daily challenge into `dev`:
 
 1. Start by running `git fetch upstream` to make sure you have the latest branches
-1. Make sure you are on `master` (type `git branch` to check)
+1. Make sure you are on `dev` (type `git branch` to check)
 1. Run `git merge upstream/<name-of-branch>` to merge in new daily tests and instructions.
 1. Write tests in the daily module file
 
 ### Resources
 
-Look through the README for each day which has readings and videos.
+Look through the folder for each day which has links to readings and videos.
 
 ### Code
 
@@ -46,8 +51,9 @@ Work through the tests one-by-one:
 
 ### Submit
 
-1. Open a PR from your fork to the upstream repository.
+1. Open a PR from `dev` to `master` in your own repository.
 1. Verify that your PR passes Travis
 1. Submit on Canvas
+1. When graded, merge your PR.
 
 
