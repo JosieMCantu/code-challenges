@@ -35,7 +35,7 @@ skip('It should append by modifying the original', (assert) => {
     const a = ['Yes', 'it', 'is'];
     appendFirstToLast(a);
 
-    assert.equal(a, ['Yes', 'it', 'is', 'Yes']);
+    assert.deepEqual(a, ['Yes', 'it', 'is', 'Yes']);
 });
 
 
@@ -66,5 +66,5 @@ skip('It should append the second array to the first', (assert) => {
     const b = [5, 6, 7, 8];
     append(a, b);
 
-    assert.equal(a, [1, 2, 3, 4, 5, 6, 7, 8]);
+    assert.deepEqual(a, [1, 2, 3, 4, 5, 6, 7, 8]);
 });
