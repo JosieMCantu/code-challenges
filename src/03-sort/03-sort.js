@@ -89,12 +89,6 @@ export class Person {
     }
 }
 
-export const people = [
-    new Person('Wes', 'Washington', 25),
-    new Person('Casey', 'Codefellow', 38),
-    new Person('Stan', 'Seattle', 67),
-];
-
 export const sortPeople = (arr) => {
   // Solution code here...
 };
