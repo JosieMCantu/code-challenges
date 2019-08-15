@@ -5,10 +5,8 @@ import {
     alphabetizeBetter,
     sortByPrice,
     sortNumbersByLength,
-    people,
     sortPeople,
     sortPeopleBetter,
-    sortMeetingsByDay,
     sortSchedule,
     Person,
     Meeting
