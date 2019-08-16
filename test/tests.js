@@ -1,3 +1,5 @@
+import './04-split-join-slice-splice.test.js';
+
 const test = QUnit.test;
 
 QUnit.module('Test Setup');
