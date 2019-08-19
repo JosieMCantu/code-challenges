@@ -1,3 +1,4 @@
+import './06-object-iteration.test.js';
 const test = QUnit.test;
 
 QUnit.module('Test Setup');
