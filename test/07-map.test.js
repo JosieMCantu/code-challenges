@@ -55,7 +55,7 @@ skip('It should return an array containing the character code for each letter', 
     );
 });
 
-skip('It should return an array containing the keys from an object', assert => {
+skip('It should return an array containing even or odd for each number', assert => {
     assert.deepEqual(
         evenOdd([5, 8, 2, 6, 9, 13, 542, 541]),
         ['odd', 'even', 'even', 'even', 'odd', 'odd', 'even', 'odd']
