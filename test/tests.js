@@ -1,3 +1,4 @@
+import './10-chaining.test.js';
 const test = QUnit.test;
 
 QUnit.module('Test Setup');
