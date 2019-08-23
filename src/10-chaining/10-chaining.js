@@ -55,7 +55,7 @@ The names should be combined into a single string with each character name separ
 For example, "Luke Skywalker and C-3PO".
 ------------------------------------------------------------------------------------------------ */
 
-export const findTallerThan = (data) => {
+export const findTallerThan = (minHeight, data) => {
   // Solution code here...
 };
 
