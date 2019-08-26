@@ -1,3 +1,4 @@
+import './14-review.test.js';
 const test = QUnit.test;
 
 QUnit.module('Test Setup');
