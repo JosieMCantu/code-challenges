@@ -1,3 +1,4 @@
+import './12-nested-loops.test.js';
 const test = QUnit.test;
 
 QUnit.module('Test Setup');
