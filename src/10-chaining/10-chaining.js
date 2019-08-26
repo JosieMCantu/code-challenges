@@ -48,7 +48,7 @@ export const divisibleByFiveTwoToThePower = (input) => {
 CHALLENGE 4
 
 Write a function named findTallerThan that, given the Star Wars data, below,
-returns the names of the characters whose gender is either male or female.
+returns the names of the characters who are taller than the specified height
 
 The names should be combined into a single string with each character name separated by "and".
 
