@@ -1,4 +1,4 @@
-```javascript
+```js
 let str = 'My instructors shred';
 
 // includes
