@@ -7,7 +7,6 @@ import {
     sortNumbersByLength,
     sortPeople,
     sortPeopleBetter,
-    sortSchedule,
     Person
 } from '../src/03-sort/03-sort.js';
 
