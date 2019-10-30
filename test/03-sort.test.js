@@ -8,8 +8,7 @@ import {
     sortPeople,
     sortPeopleBetter,
     sortSchedule,
-    Person,
-    Meeting
+    Person
 } from '../src/03-sort/03-sort.js';
 
 const { test, skip } = QUnit;
@@ -131,25 +130,4 @@ skip('It should sort people with more strict ordering', assert => {
             { firstName: 'andrew', lastName: 'apple' }
         ]
     );
-});
-
-const meetings = [
-    new Meeting('Monday', '0900', '1000'),
-    new Meeting('Wednesday', '1300', '1500'),
-    new Meeting('Tuesday', '1145', '1315'),
-    new Meeting('Wednesday', '0930', '1000'),
-    new Meeting('Monday', '0900', '0945'),
-    new Meeting('Friday', '1200', '1345'),
-];
-
-skip('It should sort meetings by when they happen', assert => {
-   
-    assert.deepEqual(sortSchedule(meetings), [
-        new Meeting('Monday', '0900', '0945'),
-        new Meeting('Monday', '0900', '1000'),
-        new Meeting('Tuesday', '1145', '1315'),
-        new Meeting('Wednesday', '0930', '1000'),
-        new Meeting('Wednesday', '1300', '1500'),
-        new Meeting('Friday', '1200', '1345'),
-    ]);
 });
