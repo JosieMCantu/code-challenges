@@ -39,7 +39,7 @@ You are making a grocery list for ingredients needed in the gruffalo crumble rec
 
 Write a function named listFoods that takes in the recipe and returns a new array of the food items without any amount or units. Just the name. For example, '1 cup flour' will return 'flour'.
 
-Use slice for this function, maybe more than once. The Array.indexOf() method may also be helpful.
+Use slice for this function, maybe more than once. The .indexOf() method may also be helpful.
 
 Do not use split for this function.
 ------------------------------------------------------------------------------------------------ */
