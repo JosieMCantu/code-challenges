@@ -27,7 +27,7 @@ Write a function name wordsToCharList that, given a string as input, returns a n
 For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
-export const wordsToCharList = (arr) => {
+export const wordsToCharList = (str) => {
     // Solution code here...
 };
 
