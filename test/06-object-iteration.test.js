@@ -1,11 +1,12 @@
 import {
     getCourseKeys,
-    getHouses,
-    hasChildrenValues,
-    hasChildrenEntries,
+    getHouseNames,
+    getHouseWords,
+    getHouseSizes,
+    getHouseHead,
     totalCharacters,
-    houseSize,
-    houseSurvivors
+    getHouseWordsMapped,
+    totalCharactersReduced,
 } from '../src/06-object-iteration/06-object-iteration.js';
 
 const { test, skip } = QUnit;
@@ -27,7 +28,7 @@ Run your tests from the browser using live-server, or console via: npm test
 const courseInfo = {
     name: 'Bootcamp II', 
     duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks' },
-    topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
+    topics: ['CSS Grid', 'APIs', 'NodeJS', 'SQL', 'Components'],
     finalExam: true
 };
 
@@ -38,110 +39,126 @@ test('It should return the keys from an object', assert => {
     );
 });
 
-let characters = [
-    {
-        name: 'Eddard',
-        spouse: 'Catelyn',
-        children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
-        house: 'Stark'
+let houses = {
+    Stark: {
+        characters: ['Eddard', 'Catelyn', 'Robb', 'Sansa', 'Arya', 'Bran', 'Rickon', 'Benjen', 'John'],
+        words: 'Winter Is Coming',
+        head: 'Sansa',
+        region: 'North'
     },
-    {
-        name: 'Jon A.',
-        spouse: 'Lysa',
-        children: ['Robin'],
-        house: 'Arryn'
+    Tyrell: {
+        characters: ['Mace', 'Alerie', 'Margaery', 'Loras', 'Olenna'],
+        words: 'Growing Strong',
+        head: 'none',
+        region: 'The Reach'
     },
-    {
-        name: 'Cersei',
-        spouse: 'Robert',
-        children: ['Joffrey', 'Myrcella', 'Tommen'],
-        house: 'Lannister'
+    Arryn: {
+        characters: ['Jon', 'Lysa', 'Robin'],
+        words: 'A High as Honor',
+        head: 'Robin',
+        region: 'The Vale of Arryn'
     },
-    {
-        name: 'Daenarys',
-        spouse: 'Khal Drogo',
-        children: ['Drogon', 'Rhaegal', 'Viserion'],
-        house: 'Targaryen'
+    Lannister: {
+        characters: ['Cersei', 'Tyrion', 'Jaime', 'Tywin', 'Lancel', 'Reginald', 'Joffrey', 'Myrcella', 'Tommen'],
+        words: 'Hear Me Roar!',
+        head: 'Tyrion',
+        region: 'The Westerlands'
     },
-    {
-        name: 'Mace',
-        spouse: 'Alerie',
-        children: ['Margaery', 'Loras'],
-        house: 'Tyrell'
+    Baratheon: {
+        characters: ['Robert', 'Stannis', 'Renly', 'Gendry'],
+        words: 'Ours is the Fury',
+        head: 'Gendry',
+        region: 'The Stormlands'
     },
-    {
-        name: 'Sansa',
-        spouse: 'Tyrion',
-        children: [],
-        house: 'Stark'
+    Targaryen: {
+        characters: ['Daenarys', 'Viserys', 'Aerys'],
+        words: 'Fire and Blood',
+        head: 'none',
+        region: 'The Crownlands'
     },
-    {
-        name: 'Jon S.',
-        spouse: null,
-        children: [],
-        house: 'Snow'
+    Greyjoy: {
+        characters: ['Balon', 'Theon', 'Asha'],
+        words: 'We Do Not Sow',
+        head: 'Yara',
+        region: 'Iron Islands'
     }
-];
-
-
+};
 
 skip('It should return an array of the names of the houses', assert => {
     assert.deepEqual(
-        getHouses(characters), 
-        ['Stark', 'Arryn', 'Lannister', 'Targaryen', 'Tyrell', 'Stark', 'Snow']
+        getHouseNames(houses), 
+        ['Stark', 'Tyrell', 'Arryn', 'Lannister', 'Baratheon', 'Targaryen', 'Greyjoy']
     );
 });
 
-
-skip('It should return true for characters that have children', assert => {
-    assert.ok(hasChildrenValues(characters, 'Daenarys'));
-});
-
-skip('It should return false to characters who do not have children', assert => {
-    assert.notOk(hasChildrenValues(characters, 'Sansa'));
-});
-
-
-skip('It should return true for characters that have children', assert => {
-    assert.ok(hasChildrenEntries(characters, 'Eddard'));
-});
-
-skip('It should return false to characters who do not have children', assert => {
-    assert.notOk(hasChildrenEntries(characters, 'Jon S.'));
-});
-
-
-skip('It should return the number of characters in the array', assert => {
-    assert.equal(totalCharacters(characters), 27);
-});
-
-
-skip('It should return an object for each house containing the name and size', assert => {
+skip('It should return an array of the words of all houses', assert => {
     assert.deepEqual(
-        houseSize(characters), 
+        getHouseWords(houses), 
         [
-            { house: 'Stark', members: 7 }, 
-            { house: 'Arryn', members: 3 }, 
-            { house: 'Lannister', members: 5 }, 
-            { house: 'Targaryen', members: 5 }, 
-            { house: 'Tyrell', members: 4 }, 
-            { house: 'Stark', members: 2 }, 
-            { house: 'Snow', members: 1 }
+            'Winter Is Coming',
+            'Growing Strong',
+            'A High as Honor',
+            'Hear Me Roar!',
+            'Ours is the Fury',
+            'Fire and Blood',
+            'We Do Not Sow'
+        ]
+    );
+});
+
+skip('It should return an array of the houses and number of characters', assert => {
+    assert.deepEqual(
+        getHouseSizes(houses), 
+        [
+            { house: 'Stark', members: 9 },
+            { house: 'Tyrell', members: 5 },
+            { house: 'Arryn', members: 3 },
+            { house: 'Lannister', members: 9 },
+            { house: 'Baratheon', members: 4 },
+            { house: 'Targaryen', members: 3 },
+            { house: 'Greyjoy', members: 3 }
+        ]
+    );
+});
+
+skip('It should return head for a house', assert => {
+    assert.equal(
+        getHouseHead(houses, 'Stark'),
+        'Sansa'
+    );
+
+    assert.equal(
+        getHouseHead(houses, 'Tyrell'),
+        'none'
+    );
+
+    assert.equal(
+        getHouseHead(houses, 'Greyjoy'),
+        'Yara'
+    );
+});
+
+skip('It should return the number of characters in all houses', assert => {
+    assert.equal(totalCharacters(houses), 36);
+});
+
+
+skip('It should return an array of the words of all houses using map', assert => {
+    assert.deepEqual(
+        getHouseWordsMapped(houses), 
+        [
+            'Winter Is Coming',
+            'Growing Strong',
+            'A High as Honor',
+            'Hear Me Roar!',
+            'Ours is the Fury',
+            'Fire and Blood',
+            'We Do Not Sow'
         ]
     );
 });
 
 
-skip('It should not include any deceased spouses', assert => {
-    assert.deepEqual(
-        houseSurvivors(characters), [
-            { house: 'Stark', members: 6 }, 
-            { house: 'Arryn', members: 2 }, 
-            { house: 'Lannister', members: 4 }, 
-            { house: 'Targaryen', members: 4 }, 
-            { house: 'Tyrell', members: 3 }, 
-            { house: 'Stark', members: 2 }, 
-            { house: 'Snow', members: 1 }
-        ]
-    );
+skip('It should return the number of characters in all houses using reduce', assert => {
+    assert.equal(totalCharactersReduced(houses), 36);
 });
