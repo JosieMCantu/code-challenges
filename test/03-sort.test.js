@@ -75,7 +75,7 @@ skip('It should sort numbers by their length', assert => {
     assert.deepEqual(sortNumbersByLength([10, 2.8, 1, -47.75]), [1, 10, 2.8, -47.75]);
     assert.deepEqual(sortNumbersByLength([100, 2.82, 1, -47.75]), [1, 100, 2.82, -47.75]);
     const sameLength = sortNumbersByLength([1, 2, 3]);
-    assert.equal(sameLength, 3);
+    assert.equal(sameLength [1, 2, 3]);
     assert.ok(sameLength.includes(1));
     assert.ok(sameLength.includes(2));
     assert.ok(sameLength.includes(3));
@@ -91,7 +91,7 @@ skip('It should sort people by their last names', assert => {
 
     assert.deepEqual(sortPeople(people), [
         new Person('Casey', 'Carson', 38),
-        new Person('Stan', 'Smith', 67),
+        new Person('Stan', 'Seattle', 67),
         new Person('Wes', 'Washington', 25),
     ]);
 
