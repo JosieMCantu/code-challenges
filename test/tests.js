@@ -1,4 +1,4 @@
-import './04-filter.test.js';
+import './07-filter.test.js';
 const test = QUnit.test;
 
 QUnit.module('Test Setup');
