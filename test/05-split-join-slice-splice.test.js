@@ -9,7 +9,7 @@ import {
     totalSumCSV,
     removeVowels,
     extractVowels
-} from '../src/04-split-join-slice-splice/04-split-join-slice-splice.js';
+} from '../src/05-split-join-slice-splice/05-split-join-slice-splice.js';
 
 const { test, skip } = QUnit;
 
