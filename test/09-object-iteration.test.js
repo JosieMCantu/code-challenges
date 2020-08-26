@@ -7,11 +7,11 @@ import {
     totalCharacters,
     getHouseWordsMapped,
     totalCharactersReduced,
-} from '../src/06-object-iteration/06-object-iteration.js';
+} from '../src/09-object-iteration/09-object-iteration.js';
 
 const { test, skip } = QUnit;
 
-QUnit.module('06 Object Iteration');
+QUnit.module('09 Object Iteration');
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
