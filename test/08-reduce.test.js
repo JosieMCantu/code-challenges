@@ -7,11 +7,11 @@ import {
     countPrimeNumbers,
     effortStats,
     extractChildren
-} from '../src/09-reduce/09-reduce.js';
+} from '../src/08-reduce/08-reduce.js';
 
 const { test, skip } = QUnit;
 
-QUnit.module('09 Array reduce');
+QUnit.module('08 Array reduce');
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
