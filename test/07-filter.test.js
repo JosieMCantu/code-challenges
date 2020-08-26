@@ -6,11 +6,11 @@ import {
     getStatName,
     getCharactersWithoutChildren,
     evenOddNumericValues
-} from '../src/08-filter/08-filter.js';
+} from '../src/07-filter/07-filter.js';
 
 const { test, skip } = QUnit;
 
-QUnit.module('08 Array filter');
+QUnit.module('07 Array filter');
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
