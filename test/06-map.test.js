@@ -6,11 +6,11 @@ import {
     evenOdd,
     extractAbilities,
     extractStats
-} from '../src/07-map/07-map.js';
+} from '../src/06-map/06-map.js';
 
 const { test, skip } = QUnit;
 
-QUnit.module('07 Array map');
+QUnit.module('06 Array map');
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
