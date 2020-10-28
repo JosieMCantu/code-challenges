@@ -1,3 +1,5 @@
+import './03-sort.test.js';
+
 const test = QUnit.test;
 
 QUnit.module('Test Setup');
