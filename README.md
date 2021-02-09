@@ -47,12 +47,12 @@ Work through the tests one-by-one:
 1. Make that test pass.
 1. Git ACP (add, commit, push)
 1. Repeat until done.
-1. Run `npm test` to preflight what will happen on travis
+1. Run `npm test` to preflight what will happen on Github Actions
 
 ### Submit
 
 1. Open a PR from `dev` to `master` in your own repository.
-1. Verify that your PR passes Travis
+1. Verify that your PR passes Github Actions
 1. Submit on Canvas
 1. When graded, merge your PR.
 
