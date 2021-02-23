@@ -4,6 +4,7 @@ import './03-sort.test.js';
 import './04-regex-part-1.test.js';
 import './05-split-join-slice-splice.test.js';
 
+import './06-map.test.js';
 const test = QUnit.test;
 
 QUnit.module('Test Setup');
