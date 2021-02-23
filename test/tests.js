@@ -1,3 +1,5 @@
+import './01-for-each.test.js';
+
 const test = QUnit.test;
 
 QUnit.module('Test Setup');
