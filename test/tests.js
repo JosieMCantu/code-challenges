@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import './01-for-each.test.js';
 import './02-by-val-by-ref.test.js';
 import './03-sort.test.js';
@@ -8,6 +9,9 @@ import './07-filter.test.js';
 import './08-reduce.test.js';
 import './09-object-iteration.test.js';
 import './10-chaining.test.js';
+=======
+import './11-regex-part-2.test.js';
+>>>>>>> upstream/11-regex-part-2
 const test = QUnit.test;
 
 QUnit.module('Test Setup');
