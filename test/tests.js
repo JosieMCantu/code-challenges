@@ -6,6 +6,7 @@ import './05-split-join-slice-splice.test.js';
 import './06-map.test.js';
 import './07-filter.test.js';
 import './08-reduce.test.js';
+import './09-object-iteration.test.js';
 const test = QUnit.test;
 
 QUnit.module('Test Setup');
