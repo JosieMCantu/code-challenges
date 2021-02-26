@@ -32,7 +32,7 @@ the daily challenge into `dev`:
 
 1. Start by running `git fetch upstream` to make sure you have the latest branches
 1. Make sure you are on `dev` (type `git branch` to check)
-1. Run `git merge upstream/<name-of-branch>` to merge in new daily tests and instructions.
+1. Uncomment the appropriate file in `tests.js`
 1. Write tests in the daily module file
 
 ### Resources
