@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import './01-for-each.test.js';
 import './02-by-val-by-ref.test.js';
 import './03-sort.test.js';
@@ -13,7 +12,8 @@ import './11-regex-part-2.test.js';
 import './12-nested-loops.test.js';
 =======
 import './13-strings.test.js';
->>>>>>> upstream/13-strings
+import './14-review.test.js';
+
 const test = QUnit.test;
 
 QUnit.module('Test Setup');
