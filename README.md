@@ -51,7 +51,7 @@ Work through the tests one-by-one:
 
 ### Submit
 
-1. Open a PR from `dev` to `master` in your own repository.
+1. Open a PR from `dev` to `main` in your own repository.
 1. Verify that your PR passes Github Actions
 1. Submit on Canvas
 1. When graded, merge your PR.
