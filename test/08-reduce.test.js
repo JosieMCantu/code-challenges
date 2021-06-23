@@ -88,7 +88,7 @@ skip('It should return an object with eye color counts', assert => {
 });
 
 skip('It should return an object with eye color names', assert => {
-    assert.equal(
+    assert.deepEqual(
         eyeColorNames(starWarsData), 
         { 
             blue: ['Luke Skywalker'], 
