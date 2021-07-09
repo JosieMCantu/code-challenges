@@ -31,28 +31,28 @@ test('It should return the message with all uppercase characters', assert => {
     assert.equal(result, 'HELLO BOOTCAMP 2 STUDENTS!');
 });
   
-skip('It should add the number 8 to the array five times', assert => {
+test('It should add the number 8 to the array five times', assert => {
     const array = [];
     const result = addNumbers(8, array, 5, addValues);
     assert.equal(array, result);
     assert.deepEqual(array, [8, 8, 8, 8, 8]);
 });
   
-skip('It should remove three elements from the array', assert => {
+test('It should remove three elements from the array', assert => {
     const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     const result = removeElements(array, removeOne);
     assert.equal(array, result);
     assert.deepEqual(array, [1, 2, 3, 4, 5, 6, 7]);
 });
   
-skip('It should remove three elements from the array', assert => {
+test('It should remove three elements from the array', assert => {
     const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     const result = removeWithForEach(array, removeOne);
     assert.equal(array, result);
     assert.deepEqual(array, [1, 2, 3, 4, 5, 6, 7]);
 });
   
-skip('It should remove three elements from the array', assert => {
+test('It should remove three elements from the array', assert => {
     const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     const result = removeWithAnon(array);
     assert.equal(array, result);
@@ -60,7 +60,7 @@ skip('It should remove three elements from the array', assert => {
 });
   
     
-skip('It should only add the available items to the list', assert => {
+test('It should only add the available items to the list', assert => {
     const inventory = [
         { name: 'apples', available: true }, 
         { name: 'pears', available: true }, 
@@ -73,7 +73,7 @@ skip('It should only add the available items to the list', assert => {
 });
   
     
-skip('It should print out messages or numbers according to fizz buzz rules', assert => {
+test('It should print out messages or numbers according to fizz buzz rules', assert => {
     const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
     const outputs = fizzBuzz(inputs);
     assert.deepEqual(outputs, [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'Fizz Buzz', 16]);

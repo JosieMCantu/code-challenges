@@ -8,12 +8,13 @@ Write a function named greeting that takes in a string and returns the string in
 Then, write a function named speaker that takes in a string and a callback function. The speaker function should return the string in all uppercase letters only by invoking the callback.
 ------------------------------------------------------------------------------------------------ */
 
-export const greeting = (word) => {
-    // Solution code here...
+export function greeting(message) {
+    const toUpper = message.toUpperCase();
+    return toUpper;
 };
 
 export const speaker = (message, callback) => {
-    // Solution code here...
+    return greeting(message);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -33,11 +34,15 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 export const addValues = (arr, value) => {
-    // Solution code here...
+    arr.push(value);
 };
 
 export const addNumbers = (num, arr, times, callback) => {
-    // Solution code here...
+    for (let i = 0; i < times; i++){
+        callback(arr, num);
+        
+    }
+    return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,12 +57,21 @@ Then, write a function named removeElements that takes in an array and a callbac
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
+
+
 export const removeOne = (num, arr) => {
-    // Solution code here...
+    if (num % 3 === 2){
+        arr.pop();
+    }
+    return arr;
 };
 
 export const removeElements = (arr, callback) => {
-    // Solution code here...
+    for (let i = 0; i < arr.length; i++){
+        const arrItem = arr[i];
+        callback(arrItem, arr);
+    }
+    return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -65,10 +79,20 @@ CHALLENGE 4
 
 Write a function named removeWithForEach that produces the same output as challenge 3, but uses forEach.
 ------------------------------------------------------------------------------------------------ */
-
 export const removeWithForEach = (arr, callback) => {
-    // Solution code here...
+    arr.forEach(num => {
+        callback(num, arr);
+    });
+    return arr;
 };
+
+// export const removeWithForEach = (arr, callback) => {
+//     arr.forEach((value, idx) => {
+//         const num = arr[(value, idx)];
+//         callback(num, arr);
+//     });
+//     return arr;
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -82,7 +106,12 @@ in removeOne directly into this anonymous function.
 ------------------------------------------------------------------------------------------------ */
 
 export const removeWithAnon = (arr) => {
-    // Solution code here...
+    arr.forEach((value, idx) => {
+        if (value % 3 === 2){
+            arr.pop();
+        }
+    })
+    return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -101,9 +130,24 @@ The inventory is formatted like this:
 
 This function should create another new array (the grocery list) and then use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
 ------------------------------------------------------------------------------------------------ */
+// export const createList = (availableItems) => {
+//     let newArr = availableItems
+//     //.filter always defaults to true
+//     .filter(item => item.available)
+//     //.map creates a copy of an array
+//     .map(item => item.name);
 
-export const createList = (availableItems) => {
-    // Solution code here...
+//     return newArr;
+// };
+
+export const createList = (arr) => {
+    let newArr = [];
+    arr.forEach((value, item) => {
+        if ( value.available === true) {
+            newArr.push(value.name);
+        }
+    })
+    return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -123,5 +167,19 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 export const fizzBuzz = (arr) => {
-    // Solution code here...
+
+    let newArr = [];
+
+    arr.forEach((num) => {
+        if(num % 3 == 0 && num % 5 == 0) {
+            newArr.push('Fizz Buzz');  
+        } else if(num % 5 == 0) {
+            newArr.push('Buzz');
+        } else if(num % 3 == 0){
+            newArr.push('Fizz');
+        } else {
+            newArr.push(num);
+        }
+    })
+    return newArr;
 };
