@@ -11,7 +11,7 @@ console.log( 'slice(0,2)', arr.slice(0,2) );
 // Find 2 elements starting at position 2
 console.log( 'slice(2,2)', arr.slice(2,4) );
 
-// Find 1 elements starting at position 4
+//////////////// Find 1 elements starting at position 4
 console.log( 'slice(3,4)', arr.slice(3,4) );
 
 // Find 1 elements starting at position 0

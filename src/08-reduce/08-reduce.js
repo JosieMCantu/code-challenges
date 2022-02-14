@@ -22,7 +22,6 @@ eye color:
 { blue: 1, yellow: 2, red: 1, brown: 1 }
 ------------------------------------------------------------------------------------------------ */
 
-
 export const eyeColorTally = (arr) => {
   // Solution code here...
 };
@@ -73,12 +72,7 @@ You are welcome to use the provided isPrime function.
 ------------------------------------------------------------------------------------------------ */
 
 const isPrime = (value) => {
-    for(let i = 2; i < value; i++) {
-        if(value % i === 0) {
-            return false;
-        }
-    }
-    return value > 1;
+  // Solution code here...
 };
 
 export const countPrimeNumbers = (arr) => {
@@ -95,7 +89,7 @@ Hint: The accumulator should begin as { min: 0, max: 0 }
 
 ------------------------------------------------------------------------------------------------ */
 
-export const effortStats = (statName, arr) => {
+export const effortStats = (arr) => {
   // Solution code here...
 };
 

@@ -28,7 +28,7 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 export const validateEmail = (email) => {
-  // Solution code here...
+// Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -53,7 +53,7 @@ Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
 export const validatePhoneNumber = (phoneNumber) => {
-  // Solution code here...
+// Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -66,5 +66,6 @@ findTagNames(['<div><h1>Hello, world!</h1></div>', '<p>Welcome to my site</p>'])
 ------------------------------------------------------------------------------------------------ */
 
 export const findTagNames = elements => {
-  // Solution code here...
+  
+
 };

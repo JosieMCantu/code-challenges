@@ -34,7 +34,7 @@ test('It should return the first letter of each element of the array', assert =>
     assert.deepEqual(firstLetters([]), []);
 });
 
-skip('It should return only the strings that contain smiley faces', assert => {
+test('It should return only the strings that contain smiley faces', assert => {
     const words = ['things', 'apple (:)', ':)banana', 'missing that thing', 'cant:)aloupe'];
 
     assert.deepEqual(findHappiness(words), ['apple (:)', ':)banana', 'cant:)aloupe']);
@@ -43,21 +43,21 @@ skip('It should return only the strings that contain smiley faces', assert => {
     assert.deepEqual(findHappiness([':) yay', ':( no', '', '', '', '']), [':) yay']);
 });
 
-skip('It should return a standardized set of phone numbers', assert => {
+test('It should return a standardized set of phone numbers', assert => {
     const nums = ['(123) 456-7890', '(222) 222-2222'];
 
     assert.deepEqual(standardizePhoneNumbers(nums), ['1234567890', '2222222222']);
     assert.deepEqual(standardizePhoneNumbers([nums[0]]), ['1234567890']);
 });
 
-skip('It should only return the odd indexed characters from the string', assert => {
+test('It should only return the odd indexed characters from the string', assert => {
     assert.equal(onlyOddChars('0123456789'), '13579');
     assert.equal(onlyOddChars('abcd'), 'bd');
     assert.equal(onlyOddChars('a'), '');
     assert.equal(onlyOddChars(''), '');
 });
 
-skip('It should correctly assess whether all the strings are happy', assert => {
+test('It should correctly assess whether all the strings are happy', assert => {
     const words = ['things', 'apple (:)', ':)banana', 'missing that thing', 'cant:)aloupe'];
 
     assert.equal(allHappy(words), false);
@@ -65,14 +65,14 @@ skip('It should correctly assess whether all the strings are happy', assert => {
     assert.equal(allHappy([]), true);
 });
 
-skip('It should find all the strings that contain a given string', assert => {
+test('It should find all the strings that contain a given string', assert => {
     const words = ['things', 'apple (:)', ':)banana', 'missing that thing', 'cant:)aloupe'];
 
     assert.deepEqual(findAnything(words, ':)'), findHappiness(words));
     assert.deepEqual(findAnything(words, 'i'), ['things', 'missing that thing']);
 });
 
-skip('It should determine whether all the strings contain a given string', assert => {
+test('It should determine whether all the strings contain a given string', assert => {
     const words = ['things', 'apple pie (:)', ':)banana pie', 'missing that thing', 'cant:)aloupe is tasty'];
 
     assert.equal(findEvery(words, 'a'), false);
@@ -80,7 +80,7 @@ skip('It should determine whether all the strings contain a given string', asser
     assert.equal(findEvery(words, 'i'), true);
 });
 
-skip('It should remove Brook from all courses', assert => {
+test('It should remove Brook from all courses', assert => {
     const roster = [
         ['Michelle', 'Allie', 'Brook TESTING'],
         ['Brook Riggio', 'hey look it\'s Brook', 'Jennifer'],

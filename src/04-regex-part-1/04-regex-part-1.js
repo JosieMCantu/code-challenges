@@ -14,6 +14,7 @@ For example:
 
 export const isNum = (input) => {
   // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -26,6 +27,7 @@ Return an array containing all the matches.
 
 export const isCapitalized = (str) => {
   // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,6 +54,7 @@ Do not use the vertical bar (pipe) in your pattern.
 
 export const matchMonth = (input) => {
   // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------

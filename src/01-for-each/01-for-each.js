@@ -9,12 +9,11 @@ Then, write a function named speaker that takes in a string and a callback funct
 ------------------------------------------------------------------------------------------------ */
 
 export function greeting(message) {
-    const toUpper = message.toUpperCase();
-    return toUpper;
+    // Solution code here...
 };
 
 export const speaker = (message, callback) => {
-    return greeting(message);
+    // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -34,15 +33,11 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 export const addValues = (arr, value) => {
-    arr.push(value);
+    // Solution code here...
 };
 
 export const addNumbers = (num, arr, times, callback) => {
-    for (let i = 0; i < times; i++){
-        callback(arr, num);
-        
-    }
-    return arr;
+    // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -60,18 +55,11 @@ Return the modified array.
 
 
 export const removeOne = (num, arr) => {
-    if (num % 3 === 2){
-        arr.pop();
-    }
-    return arr;
+    // Solution code here...
 };
 
 export const removeElements = (arr, callback) => {
-    for (let i = 0; i < arr.length; i++){
-        const arrItem = arr[i];
-        callback(arrItem, arr);
-    }
-    return arr;
+    // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -80,19 +68,8 @@ CHALLENGE 4
 Write a function named removeWithForEach that produces the same output as challenge 3, but uses forEach.
 ------------------------------------------------------------------------------------------------ */
 export const removeWithForEach = (arr, callback) => {
-    arr.forEach(num => {
-        callback(num, arr);
-    });
-    return arr;
+    // Solution code here...
 };
-
-// export const removeWithForEach = (arr, callback) => {
-//     arr.forEach((value, idx) => {
-//         const num = arr[(value, idx)];
-//         callback(num, arr);
-//     });
-//     return arr;
-// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -106,12 +83,7 @@ in removeOne directly into this anonymous function.
 ------------------------------------------------------------------------------------------------ */
 
 export const removeWithAnon = (arr) => {
-    arr.forEach((value, idx) => {
-        if (value % 3 === 2){
-            arr.pop();
-        }
-    })
-    return arr;
+    // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -130,24 +102,9 @@ The inventory is formatted like this:
 
 This function should create another new array (the grocery list) and then use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
 ------------------------------------------------------------------------------------------------ */
-// export const createList = (availableItems) => {
-//     let newArr = availableItems
-//     //.filter always defaults to true
-//     .filter(item => item.available)
-//     //.map creates a copy of an array
-//     .map(item => item.name);
-
-//     return newArr;
-// };
 
 export const createList = (arr) => {
-    let newArr = [];
-    arr.forEach((value, item) => {
-        if ( value.available === true) {
-            newArr.push(value.name);
-        }
-    })
-    return newArr;
+    // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -167,19 +124,5 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 export const fizzBuzz = (arr) => {
-
-    let newArr = [];
-
-    arr.forEach((num) => {
-        if(num % 3 == 0 && num % 5 == 0) {
-            newArr.push('Fizz Buzz');  
-        } else if(num % 5 == 0) {
-            newArr.push('Buzz');
-        } else if(num % 3 == 0){
-            newArr.push('Fizz');
-        } else {
-            newArr.push(num);
-        }
-    })
-    return newArr;
+    // Solution code here...
 };

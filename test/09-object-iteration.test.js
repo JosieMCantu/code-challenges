@@ -84,14 +84,14 @@ let houses = {
     }
 };
 
-skip('It should return an array of the names of the houses', assert => {
+test('It should return an array of the names of the houses', assert => {
     assert.deepEqual(
         getHouseNames(houses), 
         ['Stark', 'Tyrell', 'Arryn', 'Lannister', 'Baratheon', 'Targaryen', 'Greyjoy']
     );
 });
 
-skip('It should return an array of the words of all houses', assert => {
+test('It should return an array of the words of all houses', assert => {
     assert.deepEqual(
         getHouseWords(houses), 
         [
@@ -106,7 +106,7 @@ skip('It should return an array of the words of all houses', assert => {
     );
 });
 
-skip('It should return an array of the houses and number of characters', assert => {
+test('It should return an array of the houses and number of characters', assert => {
     assert.deepEqual(
         getHouseSizes(houses), 
         [
@@ -121,7 +121,7 @@ skip('It should return an array of the houses and number of characters', assert 
     );
 });
 
-skip('It should return head for a house', assert => {
+test('It should return head for a house', assert => {
     assert.equal(
         getHouseHead(houses, 'Stark'),
         'Sansa'
@@ -138,12 +138,12 @@ skip('It should return head for a house', assert => {
     );
 });
 
-skip('It should return the number of characters in all houses', assert => {
+test('It should return the number of characters in all houses', assert => {
     assert.equal(totalCharacters(houses), 36);
 });
 
 
-skip('It should return an array of the words of all houses using map', assert => {
+test('It should return an array of the words of all houses using map', assert => {
     assert.deepEqual(
         getHouseWordsMapped(houses), 
         [
@@ -159,6 +159,6 @@ skip('It should return an array of the words of all houses using map', assert =>
 });
 
 
-skip('It should return the number of characters in all houses using reduce', assert => {
+test('It should return the number of characters in all houses using reduce', assert => {
     assert.equal(totalCharactersReduced(houses), 36);
 });

@@ -14,9 +14,7 @@ For example, if the input is 'Welcome', the output will be:
 ------------------------------------------------------------------------------------------------ */
 
 export const howMuchPencil = (str) => {
-    let result = [];
     // Solution code here...
-    return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -45,9 +43,7 @@ Do not use split for this function.
 ------------------------------------------------------------------------------------------------ */
 
 export const listFoods = (recipe) => {
-    let result = [];
     // Solution code here...
-    return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -59,9 +55,7 @@ You may also use other string or array methods.
 ------------------------------------------------------------------------------------------------ */
 
 export const splitFoods = (recipe) => {
-    let result = [];
     // Solution code here...
-    return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -75,9 +69,7 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 ------------------------------------------------------------------------------------------------ */
 
 export const stepActions = (recipe) => {
-    let result = [];
     // Solution code here...
-    return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -124,9 +116,7 @@ Write a function named totalSumCSV that, given a string of comma-separated value
 ------------------------------------------------------------------------------------------------ */
 
 export const totalSumCSV = (str) => {
-    let total = 0;
     // Solution code here...
-    return total;
 };
 
 

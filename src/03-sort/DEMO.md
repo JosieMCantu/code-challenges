@@ -1,7 +1,9 @@
 ```javascript
 /*
 If compareFunction(a, b) is less than 0, sort a to an index lower than b, i.e. a comes first.
+
 If compareFunction(a, b) returns 0, leave a and b unchanged with respect to each other, but sorted with respect to all different elements.
+
 If compareFunction(a, b) is greater than 0, sort b to an index lower than a, i.e. b comes first.
  */
 const numbers = [5,1,3,9,11,100,87,44,23,67];

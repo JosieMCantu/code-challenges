@@ -28,31 +28,31 @@ test('It should return the number of times the input is in the nested arrays', a
     assert.equal(count(12, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]), 0);
 });
 
-skip('It should work on empty arrays', assert => {
+test('It should work on empty arrays', assert => {
     assert.equal(count(5, [[1, 3, 5, 7, 9], [], [5, 5, 5], [1, 2, 3], []]), 4);
     assert.equal(count(5, []), 0);
 });
 
-skip('It should add all the numbers in the arrays', assert => {
+test('It should add all the numbers in the arrays', assert => {
     const arraysOfNumbers = [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6]];
     assert.equal(totalSum(arraysOfNumbers), 66);
 });
 
-skip('It should return numbers divisible by five, then raise two to the power of the resulting numbers', assert => {
+test('It should return numbers divisible by five, then raise two to the power of the resulting numbers', assert => {
     assert.deepEqual(
         divisibleByFiveTwoToThePower([[10, 20, 5, 4], [5, 6, 7, 9], [1, 10, 3]]), 
         [[1024, 1048576, 32], [32], [1024]]
     );
 });
 
-skip('It should return an empty array if none of the numbers are divisible by five', assert => {
+test('It should return an empty array if none of the numbers are divisible by five', assert => {
     assert.deepEqual(
         divisibleByFiveTwoToThePower([[1, 2, 3], [5, 10, 15]]), 
         [[], [32, 1024, 32768]]
     );
 });
 
-skip('It should return an empty array if the values are not numbers', assert => {
+test('It should return an empty array if the values are not numbers', assert => {
     assert.deepEqual(
         divisibleByFiveTwoToThePower([['one', 'two', 'five'], ['5', '10', '15'], [5]]), 
         [[], [], [32]]
@@ -111,7 +111,7 @@ const starWarsData = [{
     gender: 'female'
 }];
 
-skip('It should return only characters that are taller than specified value', assert => {
+test('It should return only characters that are taller than specified value', assert => {
     assert.equal(
         findTallerThan(165, starWarsData), 
         'Luke Skywalker and C-3PO and Darth Vader'
@@ -126,6 +126,6 @@ skip('It should return only characters that are taller than specified value', as
     );
 });
 
-skip('It should return the name of the shortest character', assert => {
+test('It should return the name of the shortest character', assert => {
     assert.deepEqual(findShortestName(starWarsData), 'R2-D2');
 });

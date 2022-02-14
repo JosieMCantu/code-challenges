@@ -41,7 +41,7 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 export const divisibleByFiveTwoToThePower = (input) => {
-  // Solution code here...
+// Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -58,6 +58,7 @@ For example, "Luke Skywalker and C-3PO".
 export const findTallerThan = (minHeight, data) => {
   // Solution code here...
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5

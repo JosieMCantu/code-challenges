@@ -28,55 +28,55 @@ test('It should return two raised to the power of the integer', assert => {
     assert.deepEqual(forLoopTwoToThe([0, 4, 5]), [1, 16, 32]);
 });
 
-skip('It should return decimals if the integer is negative', assert => {
+test('It should return decimals if the integer is negative', assert => {
     assert.deepEqual(forLoopTwoToThe([-1, -2, -3]), [0.5, 0.25, 0.125]);
 });
 
-skip('It should return two raised to the power of the integer', assert => {
+test('It should return two raised to the power of the integer', assert => {
     assert.deepEqual(forEachTwoToThe([0, 4, 5]), [1, 16, 32]);
 });
 
-skip('It should return decimals if the integer is negative', assert => {
+test('It should return decimals if the integer is negative', assert => {
     assert.deepEqual(forEachTwoToThe([-1, -2, -3]), [0.5, 0.25, 0.125]);
 });
 
-skip('It should return two raised to the power of the integer', assert => {
+test('It should return two raised to the power of the integer', assert => {
     assert.deepEqual(mapTwoToThe([0, 4, 5]), [1, 16, 32]);
 });
 
-skip('It should return decimals if the integer is negative', assert => {
+test('It should return decimals if the integer is negative', assert => {
     assert.deepEqual(mapTwoToThe([-1, -2, -3]), [0.5, 0.25, 0.125]);
 });
 
-skip('It should return an array containing the character code for each letter', assert => {
+test('It should return an array containing the character code for each letter', assert => {
     assert.deepEqual(
         charCode(['C', 'o', 'd', 'e', '3', '0', '1']),
         [67, 111, 100, 101, 51, 48, 49]
     );
 });
 
-skip('It should return an array containing even or odd for each number', assert => {
+test('It should return an array containing even or odd for each number', assert => {
     assert.deepEqual(
         evenOdd([5, 8, 2, 6, 9, 13, 542, 541]),
         ['odd', 'even', 'even', 'even', 'odd', 'odd', 'even', 'odd']
     );
 });
 
-skip('It should work with all odd numbers', assert => {
+test('It should work with all odd numbers', assert => {
     assert.deepEqual(
         evenOdd([1, 3, 5, 7, 9]),
         ['odd', 'odd', 'odd', 'odd', 'odd']
     );
 });
 
-skip('It should work with all even numbers', assert => {
+test('It should work with all even numbers', assert => {
     assert.deepEqual(
         evenOdd([2, 4, 6, 8, 10]),
         ['even', 'even', 'even', 'even', 'even']
     );
 });
 
-skip('It should return the string "N/A" if a non-number is included in the array', assert => {
+test('It should return the string "N/A" if a non-number is included in the array', assert => {
     assert.deepEqual(
         evenOdd([5, 8, 2, 'hi']), ['odd', 'even', 'even', 'N/A']);
 });
@@ -112,7 +112,7 @@ const snorlaxAbilities = {
     weight: 4600,
 };
 
-skip('It should return an array containing only the ability names', assert => {
+test('It should return an array containing only the ability names', assert => {
     assert.deepEqual(
         extractAbilities(snorlaxAbilities.abilities),
         ['gluttony', 'cute charm', 'immunity']
@@ -150,7 +150,7 @@ const snorlaxStats = {
     weight: 4600,
 };
 
-skip('It should return an array containing objects with name and total values', assert => {
+test('It should return an array containing objects with name and total values', assert => {
     assert.deepEqual(
         extractStats(snorlaxStats.stats),
         [

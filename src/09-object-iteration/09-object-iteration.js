@@ -55,6 +55,7 @@ This function should take in the house data and a house name and return a the na
 
 export const getHouseHead = (houses, houseToFind) => {
     // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------

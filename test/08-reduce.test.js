@@ -80,14 +80,14 @@ const starWarsData = [{
     gender: 'female'
 }];
 
-skip('It should return an object with eye color counts', assert => {
+test('It should return an object with eye color counts', assert => {
     assert.deepEqual(
         eyeColorTally(starWarsData), 
         { blue: 1, yellow: 2, red: 1, brown: 1 }
     );
 });
 
-skip('It should return an object with eye color names', assert => {
+test('It should return an object with eye color names', assert => {
     assert.deepEqual(
         eyeColorNames(starWarsData), 
         { 
@@ -143,15 +143,15 @@ const characters = [
     },
 ];
 
-skip('It should return the total number of children', assert => {
+test('It should return the total number of children', assert => {
     assert.equal(countNumberOfChildren(characters), 14);
 });
 
-skip('It should return the average of the numbers in the array', assert => {
+test('It should return the average of the numbers in the array', assert => {
     assert.equal(calculateAverage([18, 290, 37, 4, 55, 16, 7, 85]), 64);
 });
 
-skip('It should return a count of the prime numbers in the array', assert => {
+test('It should return a count of the prime numbers in the array', assert => {
     assert.equal(countPrimeNumbers([1, 2, 13, 64, 45, 56, 17, 8]), 3);
 });
 
@@ -186,14 +186,14 @@ const snorlaxData = {
     weight: 4600,
 };
 
-skip('It should return effort stats that match the input', assert => {
+test('It should return effort stats that match the input', assert => {
     assert.deepEqual(
         effortStats(snorlaxData.stats), 
         { min: 2, max: 9 }
     );
 });
 
-skip('It should return an array containing the names of the children', assert => {
+test('It should return an array containing the names of the children', assert => {
     assert.deepEqual(
         extractChildren(characters), 
         ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon', 'Drogon', 'Rhaegal', 'Viserion', 'Margaery', 'Loras']

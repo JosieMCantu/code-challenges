@@ -14,7 +14,6 @@ Return the array of the total number of cookies sold per hour for all of the sto
 
 export const grandTotal = (stores) => {
   // Solution code here...
-
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -28,7 +27,7 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 export const salesData = (hours, data) => {
-  // Solution code here...
+// Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -60,7 +59,7 @@ The top row of the board is considered row zero and row numbers increase as they
 ------------------------------------------------------------------------------------------------ */
 
 export const battleship = (board, row, col) => {
-  //  Solution code here...
+// Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
