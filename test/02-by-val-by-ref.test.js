@@ -6,7 +6,9 @@ import {
     append
 } from '../src/02-by-val-by-ref/02-by-val-by-ref.js';
 
-const { test, skip } = QUnit;
+// const { test, skip } = QUnit;
+const { test } = QUnit;
+
 
 QUnit.module('02 By Val / By Ref');
 

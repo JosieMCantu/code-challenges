@@ -9,11 +9,13 @@ Then, write a function named speaker that takes in a string and a callback funct
 ------------------------------------------------------------------------------------------------ */
 
 export function greeting(message) {
-    // Solution code here...
-};
+    let result = message.toUpperCase();
+    return result;
+}
 
 export const speaker = (message, callback) => {
-    // Solution code here...
+    const result = callback(message);
+    return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -33,11 +35,15 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 export const addValues = (arr, value) => {
-    // Solution code here...
+    arr.push(value);
 };
 
 export const addNumbers = (num, arr, times, callback) => {
-    // Solution code here...
+    for(var i = 0; i < times; i++){
+        callback(arr, num);    
+    }
+
+    return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,11 +61,17 @@ Return the modified array.
 
 
 export const removeOne = (num, arr) => {
-    // Solution code here...
+    let result = num % 3;
+    if(result === 2){
+        arr.pop();
+    }
 };
 
 export const removeElements = (arr, callback) => {
-    // Solution code here...
+    for(var i = 0; i < arr.length; i++){
+        callback(arr[i], arr);
+    }
+    return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -68,7 +80,11 @@ CHALLENGE 4
 Write a function named removeWithForEach that produces the same output as challenge 3, but uses forEach.
 ------------------------------------------------------------------------------------------------ */
 export const removeWithForEach = (arr, callback) => {
-    // Solution code here...
+    arr.forEach(element => {
+        callback(element, arr);
+    });
+
+    return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -80,10 +96,17 @@ Write a function named removeWithAnon that produces the same output as challenge
 This function should use forEach again, but rather than taking in a callback as an argument, 
 define an anonymous function as the argument to forEach. Essentially you should inline the code
 in removeOne directly into this anonymous function.
+
 ------------------------------------------------------------------------------------------------ */
 
 export const removeWithAnon = (arr) => {
-    // Solution code here...
+    arr.forEach(num => {
+        const result = num % 3;
+        if(result === 2){
+            arr.pop();
+        }
+    });
+    return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -104,7 +127,13 @@ This function should create another new array (the grocery list) and then use fo
 ------------------------------------------------------------------------------------------------ */
 
 export const createList = (arr) => {
-    // Solution code here...
+    const list = [];
+    arr.forEach(item => {
+        if(item.available === true){
+            list.push(item.name);
+        }
+    });
+    return list;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -124,5 +153,17 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 export const fizzBuzz = (arr) => {
-    // Solution code here...
+    const result = [];
+    arr.forEach(element => {
+        if(element % 3 === 0 && element % 5 !== 0){
+            result.push('Fizz');
+        } else if(element % 5 === 0 && element % 3 !== 0){
+            result.push('Buzz');
+        } else if(element % 3 === 0 && element % 5 === 0){
+            result.push('Fizz Buzz');
+        } else {
+            result.push(element);
+        }
+    });
+    return result;
 };

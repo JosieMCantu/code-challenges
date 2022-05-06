@@ -30,7 +30,7 @@ test('It should return an array containing only odd integers', assert => {
     assert.deepEqual(oddValues([2, 4, 6, 8]), []);
 });
 
-test('It should return an array containing only words that have vowels', assert => {
+skip('It should return an array containing only words that have vowels', assert => {
     assert.deepEqual(
         filterStringsWithVowels(['gregor', 'hound', 'xyz']),
         ['gregor', 'hound']
@@ -51,15 +51,15 @@ const secondNumbers = [1, 2, 3, 4];
 const firstStrings = ['Demi', 'Gregor', 'Hound'];
 const secondStrings = ['Gary', 'Charlotte', 'Demi', 'Gregor', 'Hound'];
 
-test('It should return an array that includes any elements not in the first array', assert => {
+skip('It should return an array that includes any elements not in the first array', assert => {
     assert.deepEqual(notInFirstArray(firstNumbers, secondNumbers), [4]);
 });
 
-test('It should also work with an array of strings', assert => {
+skip('It should also work with an array of strings', assert => {
     assert.deepEqual(notInFirstArray(firstStrings, secondStrings), ['Gary', 'Charlotte']);
 });
 
-test('It should work with empty arrays', assert => {
+skip('It should work with empty arrays', assert => {
     assert.deepEqual(notInFirstArray([], []), []);
     assert.deepEqual(notInFirstArray([], [1, 2, 3, 4, 5]), [1, 2, 3, 4, 5]);
     assert.deepEqual(notInFirstArray([1, 2, 3, 4, 5], []), []);
@@ -97,7 +97,7 @@ const snorlaxData = {
     weight: 4600,
 };
 
-test('It should return an array containing the stats that are greater than the input', assert => {
+skip('It should return an array containing the stats that are greater than the input', assert => {
     assert.deepEqual(
         getBaseStatGreaterThan(snorlaxData.stats, 75),
         [{ stat: { url: 'https://pokeapi.co/api/v2/stat/5/', name: 'special-defense' }, effort: 2, baseStat: 110 }]
@@ -105,22 +105,22 @@ test('It should return an array containing the stats that are greater than the i
     assert.deepEqual(getBaseStatGreaterThan(snorlaxData.stats, 110), []);
 });
 
-test('It should work for non-Snorlax data', assert => {
+skip('It should work for non-Snorlax data', assert => {
     assert.deepEqual(
         getBaseStatGreaterThan([{ baseStat: 10 }, { baseStat: -85 }, { baseStat: 0 }, { baseStat: -50 }], -60),
         [{ baseStat: 10 }, { baseStat: 0 }, { baseStat: -50 }]
     );
 });
 
-test('It should return the name of the stats that exceed that maximum', assert => {
+skip('It should return the name of the stats that exceed that maximum', assert => {
     assert.deepEqual(getStatName(snorlaxData.stats, 50), ['special-defense', 'special-attack']);
 });
 
-test('It should return no matches', assert => {
+skip('It should return no matches', assert => {
     assert.deepEqual(getStatName(snorlaxData.stats, 120), []);
 });
 
-test('It should work for non-snorlax data', assert => {
+skip('It should work for non-snorlax data', assert => {
     assert.deepEqual(getStatName([
         { baseStat: 10, stat: { name: 'one' } },
         { baseStat: -85, stat: { name: 'two' } },
@@ -173,7 +173,7 @@ const characters = [
     },
 ];
 
-test('It should return an array containing characters who do not have children', assert => {
+skip('It should return an array containing characters who do not have children', assert => {
     assert.deepEqual(
         getCharactersWithoutChildren(characters), 
         [
@@ -183,12 +183,12 @@ test('It should return an array containing characters who do not have children',
     );
 });
 
-test('It should remove non-integers and return "even" or "odd', assert => {
+skip('It should remove non-integers and return "even" or "odd', assert => {
     assert.deepEqual(evenOddNumericValues(['Gregor', 2, 4, 1]), ['even', 'even', 'odd']);
     assert.deepEqual(evenOddNumericValues(['a', 'b', 'c']), []);
 });
 
-test('It should not accept strings that look like numbers', assert => {
+skip('It should not accept strings that look like numbers', assert => {
     assert.deepEqual(
         evenOddNumericValues(['1', 2, 3, '4', 5, '6']), 
         ['even', 'odd', 'odd']

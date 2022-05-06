@@ -32,23 +32,23 @@ test('It should validate a PIN of exactly four digits', assert => {
     assert.equal(validatePin('0000'), true);
 });
 
-test('It should match a basic email', assert => {
+skip('It should match a basic email', assert => {
     assert.equal(validateEmail('joe@company.com'), true);
 });
 
-test('It should match if the email contains a period', assert => {
+skip('It should match if the email contains a period', assert => {
     assert.equal(validateEmail('joe.schmoe@company.net'), true);
 });
 
-test('It should match if the email contains other top-level domains', assert => {
+skip('It should match if the email contains other top-level domains', assert => {
     assert.equal(validateEmail('joe@company.org'), true);
 });
 
-test('It should match if the email contains a period and other top-level domains', assert => {
+skip('It should match if the email contains a period and other top-level domains', assert => {
     assert.equal(validateEmail('joe.schmoe@company.net'), true);
 });
 
-test('It should fail things that aren\'t email addresses', assert => {
+skip('It should fail things that aren\'t email addresses', assert => {
     assert.equal(validateEmail('justastring'), false);
     assert.equal(validateEmail('missing@adomain'), false);
     assert.equal(validateEmail('@noname.com'), false);
@@ -60,7 +60,7 @@ test('It should fail things that aren\'t email addresses', assert => {
     assert.equal(validateEmail('no.middle.names@foryou.com'), false);
 });
 
-test('It should match the acceptable phone number formats', assert => {
+skip('It should match the acceptable phone number formats', assert => {
     assert.equal(validatePhoneNumber('(555) 555-5555'), true);
     assert.equal(validatePhoneNumber('555 555-5555'), true);
     assert.equal(validatePhoneNumber('555-555-5555'), true);
@@ -69,7 +69,7 @@ test('It should match the acceptable phone number formats', assert => {
     assert.equal(validatePhoneNumber('234 567 8910'), true);
 });
 
-test('It should not match unacceptable phone number formats', assert => {
+skip('It should not match unacceptable phone number formats', assert => {
     assert.equal(validatePhoneNumber('abcdefghij'), false);
     assert.equal(validatePhoneNumber('222 222 2222 ext. 2222'), false);
     assert.equal(validatePhoneNumber('(222 222-2222'), false);
@@ -83,14 +83,14 @@ test('It should not match unacceptable phone number formats', assert => {
     assert.equal(validatePhoneNumber('55_55_5555'), false);
 });
 
-test('It should return the closing tags', assert => {
+skip('It should return the closing tags', assert => {
     assert.deepEqual(
         findTagNames(['<h1>Hello, world!</h1>', '<p>Welcome to my site</p>']),
         ['/h1', '/p']
     );
 });
 
-test('It should work if there are multiple closing tags in a single string', assert => {
+skip('It should work if there are multiple closing tags in a single string', assert => {
     assert.deepEqual(
         findTagNames(['<div><h1>Hello, world!</h1></div>', '<p>Welcome to my site</p>']),
         ['/h1', '/div', '/p']

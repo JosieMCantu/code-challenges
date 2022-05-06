@@ -10,7 +10,8 @@ import {
     Person
 } from '../src/03-sort/03-sort.js';
 
-const { test, skip } = QUnit;
+// const { test, skip } = QUnit;
+const { test } = QUnit;
 
 QUnit.module('03 Sort');
 
