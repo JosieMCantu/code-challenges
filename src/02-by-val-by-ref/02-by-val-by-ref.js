@@ -80,5 +80,5 @@ console.log(a) prints [1, 2, 3, 4]
 ------------------------------------------------------------------------------------------------ */
 
 export const append = (arr1, arr2) => {
-  // Solution code here...
+    arr1.push(...arr2);
 };

@@ -62,7 +62,7 @@ test('It should add a property to every object in an array', (assert) => {
 });
 
 
-skip('It should append the second array to the first', (assert) => {
+test('It should append the second array to the first', (assert) => {
     const a = [1, 2, 3, 4];
     const b = [5, 6, 7, 8];
     append(a, b);
