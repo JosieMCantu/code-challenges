@@ -61,7 +61,7 @@ test('It should remove three elements from the array', assert => {
 });
   
     
-skip('It should only add the available items to the list', assert => {
+test('It should only add the available items to the list', assert => {
     const inventory = [
         { name: 'apples', available: true }, 
         { name: 'pears', available: true }, 
