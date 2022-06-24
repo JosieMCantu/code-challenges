@@ -23,7 +23,7 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 
 export const findHappiness = (arr) => {
   // Solution code here...
-}
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {
     grandTotal,
     salesData,
@@ -34,14 +35,14 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
-test('It should add the hourly totals array', assert => {
+skip('It should add the hourly totals array', assert => {
     assert.deepEqual(
         grandTotal(cookieStores), 
         [88, 153, 252, 286, 139, 161, 145, 232, 276, 207, 161, 169]
     );
 });
 
-test('It should create an object of data for each store', assert => {
+skip('It should create an object of data for each store', assert => {
     assert.deepEqual(
         salesData(hoursOpen, grandTotal(cookieStores)), 
         [
@@ -76,7 +77,7 @@ const errands = [
     }
 ];
 
-test('It should return the number 24', assert => {
+skip('It should return the number 24', assert => {
     assert.equal(howManyTreats(errands), 24);
 });
 
@@ -87,25 +88,25 @@ const battleshipData = [
     [' ', ' ', '#', '#'],
 ];
 
-test('It should return "hit" when it hits a boat', assert => {
+skip('It should return "hit" when it hits a boat', assert => {
     assert.equal(battleship(battleshipData, 0, 0), 'hit');
     assert.equal(battleship(battleshipData, 1, 0), 'hit');
 });
 
-test('It should return "miss" when it doesn\'t hit a boat', assert => {
+skip('It should return "miss" when it doesn\'t hit a boat', assert => {
     assert.equal(battleship(battleshipData, 0, 1), 'miss');
     assert.equal(battleship(battleshipData, 3, 0), 'miss');
 });
 
-test('It should multiply all the numbers together', assert => {
+skip('It should multiply all the numbers together', assert => {
     assert.equal(calculateProduct([[1, 2], [3, 4], [5, 6]]), 720);
 });
 
-test('It should return zero if there are any zeroes in the data', assert => {
+skip('It should return zero if there are any zeroes in the data', assert => {
     assert.equal(calculateProduct([[2, 3, 4, 6, 0], [4, 3, 7], [2, 4, 6]]), 0);
 });
 
-test('It should work even if some of the arrays contain no numbers', assert => {
+skip('It should work even if some of the arrays contain no numbers', assert => {
     assert.equal(calculateProduct([[1, 2], [], [3, 4, 5]]), 120);
 });
 
@@ -116,7 +117,7 @@ const weeklyTemperatures = [
     [65, 56, 55, 52, 55, 62, 57],
 ];
 
-test('It should calculate and return the average temperature of the data set', assert => {
+skip('It should calculate and return the average temperature of the data set', assert => {
     assert.equal(averageDailyTemperature(weeklyTemperatures), 60.25);
 });
 
@@ -127,12 +128,12 @@ const lowestWeeklyTemperatureData = [
     [65, 56, 55, 52, 55, 62, 57],
 ];
 
-test('It should return the lowest weekly average temperature within the data set', assert => {
+skip('It should return the lowest weekly average temperature within the data set', assert => {
     assert.equal(lowestWeeklyAverage(weeklyTemperatures), 57);
     assert.equal(lowestWeeklyAverage(lowestWeeklyTemperatureData), 46);
 });
 
-test('It should return the total count for each row', assert => {
+skip('It should return the total count for each row', assert => {
     const result = excel('1,1,1\n4,4,4\n9,9,9');
     assert.equal(result.length, 3);
     assert.equal(result[0], 3);

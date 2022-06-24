@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {
     isNum,
     isCapitalized,
@@ -24,21 +25,21 @@ Run your tests from the browser using live-server, or console via: npm test
 ------------------------------------------------------------------------------------------------ */
 
 
-test('It should return true if the input is a number', assert => {
+skip('It should return true if the input is a number', assert => {
     assert.ok(isNum(1234567890));
     assert.ok(isNum('12345'));
 });
 
-test('It should return true if the input contains a number', assert => {
+skip('It should return true if the input contains a number', assert => {
     assert.ok(isNum('h3llo w0rld'));
 });
 
-test('It should return false if the input does not contain a number', assert => {
+skip('It should return false if the input does not contain a number', assert => {
     assert.notOk(isNum('hello world'));
     assert.notOk(isNum(''));
 });
 
-test('It should only return words that begin with a capital letter', assert => {
+skip('It should only return words that begin with a capital letter', assert => {
     const capitalResult = isCapitalized('We only want to Return the Words that begin With a capital Letter');
 
     assert.deepEqual(capitalResult, ['We', 'Return', 'Words', 'With', 'Letter']);
@@ -53,7 +54,7 @@ test('It should only return words that begin with a capital letter', assert => {
 
 const cities = ['Cleveland', 'San Diego', 'Birmingham', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Austin', 'Boston', 'Newport Beach', 'Hoboken'];
 
-test('It should return the cities whose names begin with the letters A through J', assert => {
+skip('It should return the cities whose names begin with the letters A through J', assert => {
     assert.deepEqual(citiesAtoJ(cities).sort(), ['Austin', 'Birmingham', 'Boston', 'Cleveland', 'Hoboken']);
     assert.deepEqual(citiesAtoJ([]), []);
     assert.deepEqual(
@@ -62,14 +63,14 @@ test('It should return the cities whose names begin with the letters A through J
     );
 });
 
-test('It should not return the cities whose names begin with the letters K through Z', assert => {
+skip('It should not return the cities whose names begin with the letters K through Z', assert => {
     const kToZCities = ['San Diego', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Newport Beach'];
     citiesAtoJ(cities).forEach(city => {
         assert.notOk(kToZCities.includes(city));
     });
 });
 
-test('It should match any of the acceptable inputs', assert => {
+skip('It should match any of the acceptable inputs', assert => {
     assert.ok(matchMonth('Oct'));
     assert.ok(matchMonth('oct'));
     assert.ok(matchMonth('October'));
@@ -87,7 +88,7 @@ skip('It should not match anything other than the acceptable inputs', assert => 
 
 const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacinia vel massa sed egestas. Nunc faucibus iaculis elit, a scelerisque enim condimentum sed. Aenean ac scelerisque sem, et pharetra diam.';
 
-test('It should only return words that are immediately followed by a space', assert => {
+skip('It should only return words that are immediately followed by a space', assert => {
     assert.deepEqual(
         noPunctuation(lorem),
         ['Lorem ', 'ipsum ', 'dolor ', 'sit ', 'consectetur ', 'adipiscing ', 'Cras ', 'lacinia ', 'vel ', 'massa ', 'sed ', 'Nunc ', 'faucibus ', 'iaculis ', 'a ', 'scelerisque ', 'enim ', 'condimentum ', 'Aenean ', 'ac ', 'scelerisque ', 'et ', 'pharetra ']

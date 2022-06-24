@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {
     toTitleCase,
     biggerThanLuke,
@@ -22,7 +23,7 @@ Run your tests from the browser using live-server, or console via: npm test
 ------------------------------------------------------------------------------------------------ */
 
 
-test('It should convert each word to title case', assert => {
+skip('It should convert each word to title case', assert => {
     const words = ['apple', 'banana', 'MacGyver'];
     assert.deepEqual(toTitleCase(words), ['Apple', 'Banana', 'MacGyver']);
     assert.deepEqual(toTitleCase([]), []);

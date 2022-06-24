@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {
     countNumberOfElements,
     eyeColorTally,
@@ -25,7 +26,7 @@ Run your tests from the browser using live-server, or console via: npm test
 ------------------------------------------------------------------------------------------------ */
 
 
-test('It should return the length of the array', assert => {
+skip('It should return the length of the array', assert => {
     assert.equal(countNumberOfElements([1, 2, 3, 4, 5]), 5);
 });
 
@@ -80,14 +81,14 @@ const starWarsData = [{
     gender: 'female'
 }];
 
-test('It should return an object with eye color counts', assert => {
+skip('It should return an object with eye color counts', assert => {
     assert.deepEqual(
         eyeColorTally(starWarsData), 
         { blue: 1, yellow: 2, red: 1, brown: 1 }
     );
 });
 
-test('It should return an object with eye color names', assert => {
+skip('It should return an object with eye color names', assert => {
     assert.deepEqual(
         eyeColorNames(starWarsData), 
         { 
@@ -143,15 +144,15 @@ const characters = [
     },
 ];
 
-test('It should return the total number of children', assert => {
+skip('It should return the total number of children', assert => {
     assert.equal(countNumberOfChildren(characters), 14);
 });
 
-test('It should return the average of the numbers in the array', assert => {
+skip('It should return the average of the numbers in the array', assert => {
     assert.equal(calculateAverage([18, 290, 37, 4, 55, 16, 7, 85]), 64);
 });
 
-test('It should return a count of the prime numbers in the array', assert => {
+skip('It should return a count of the prime numbers in the array', assert => {
     assert.equal(countPrimeNumbers([1, 2, 13, 64, 45, 56, 17, 8]), 3);
 });
 
@@ -186,14 +187,14 @@ const snorlaxData = {
     weight: 4600,
 };
 
-test('It should return effort stats that match the input', assert => {
+skip('It should return effort stats that match the input', assert => {
     assert.deepEqual(
         effortStats(snorlaxData.stats), 
         { min: 2, max: 9 }
     );
 });
 
-test('It should return an array containing the names of the children', assert => {
+skip('It should return an array containing the names of the children', assert => {
     assert.deepEqual(
         extractChildren(characters), 
         ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon', 'Drogon', 'Rhaegal', 'Viserion', 'Margaery', 'Loras']

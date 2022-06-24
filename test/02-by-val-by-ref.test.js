@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { 
     appendTheEnd,
     appendFirstToLast,
@@ -22,7 +23,7 @@ Run your tests from the browser using live-server, or console via: npm test
 ------------------------------------------------------------------------------------------------ */
 
 
-test('It should append without modifying the original', (assert) => {
+skip('It should append without modifying the original', (assert) => {
     const a = 'This is my story.';
     const b = appendTheEnd(a);
 
@@ -31,7 +32,7 @@ test('It should append without modifying the original', (assert) => {
 });
 
 
-test('It should append by modifying the original', (assert) => {
+skip('It should append by modifying the original', (assert) => {
     const a = ['Yes', 'it', 'is'];
     appendFirstToLast(a);
 
@@ -39,7 +40,7 @@ test('It should append by modifying the original', (assert) => {
 });
 
 
-test('It should add a property to an object', (assert) => {
+skip('It should add a property to an object', (assert) => {
     const a = { fullName: 'Octavia Butler' };
     addBirthYearProperty(a, 1947);
 
@@ -47,7 +48,7 @@ test('It should add a property to an object', (assert) => {
 });
 
 
-test('It should add a property to every object in an array', (assert) => {
+skip('It should add a property to every object in an array', (assert) => {
     const a = [
         { fullName: 'Octavia Butler' }, 
         { fullName: 'Ray Bradbury' }, 
@@ -61,7 +62,7 @@ test('It should add a property to every object in an array', (assert) => {
 });
 
 
-test('It should append the second array to the first', (assert) => {
+skip('It should append the second array to the first', (assert) => {
     const a = [1, 2, 3, 4];
     const b = [5, 6, 7, 8];
     append(a, b);
