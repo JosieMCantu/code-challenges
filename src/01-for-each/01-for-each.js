@@ -95,7 +95,9 @@ in removeOne directly into this anonymous function.
 ------------------------------------------------------------------------------------------------ */
 
 export const removeWithAnon = (arr) => {
-    // Solution code here...
+    arr.forEach((i) => arr[i] % 3 === 2 && arr.pop());
+
+    return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------

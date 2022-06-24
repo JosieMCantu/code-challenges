@@ -53,7 +53,7 @@ test('It should remove three elements from the array', assert => {
     assert.deepEqual(array, [1, 2, 3, 4, 5, 6, 7]);
 });
   
-skip('It should remove three elements from the array', assert => {
+test('It should remove three elements from the array', assert => {
     const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     const result = removeWithAnon(array);
     assert.equal(array, result);
