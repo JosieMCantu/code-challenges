@@ -32,7 +32,7 @@ test('It should return the message with all uppercase characters', assert => {
     assert.equal(result, 'HELLO BOOTCAMP 2 STUDENTS!');
 });
   
-skip('It should add the number 8 to the array five times', assert => {
+test('It should add the number 8 to the array five times', assert => {
     const array = [];
     const result = addNumbers(8, array, 5, addValues);
     assert.equal(array, result);
