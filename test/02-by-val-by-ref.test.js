@@ -32,7 +32,7 @@ test('It should append without modifying the original', (assert) => {
 });
 
 
-skip('It should append by modifying the original', (assert) => {
+test('It should append by modifying the original', (assert) => {
     const a = ['Yes', 'it', 'is'];
     appendFirstToLast(a);
 
