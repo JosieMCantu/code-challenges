@@ -59,11 +59,15 @@ Return the modified array.
 
 
 export const removeOne = (num, arr) => {
-    // Solution code here...
+    num % 3 === 2 && arr.pop();
 };
 
 export const removeElements = (arr, callback) => {
-    // Solution code here...
+    for(let i = 0; i < arr.length; i++) {
+        removeOne(arr[i], arr);
+    }
+
+    return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
