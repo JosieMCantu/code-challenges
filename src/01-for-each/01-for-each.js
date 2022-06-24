@@ -141,5 +141,18 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 export const fizzBuzz = (arr) => {
-    // Solution code here...
+    let output = [];
+    arr.forEach((i) => {
+        if(i % 5 === 0 && i % 3 === 0) {
+            output.push('Fizz Buzz');
+        } else if(i % 5 === 0) {
+            output.push('Buzz');
+        } else if(i % 3 === 0) {
+            output.push('Fizz');
+        } else {
+            output.push(i);
+        }
+    });
+
+    return output;
 };
