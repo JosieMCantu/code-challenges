@@ -43,7 +43,7 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 export const alphabetizeBetter = (arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => a.localeCompare(b));
 };
 
 /* ------------------------------------------------------------------------------------------------
