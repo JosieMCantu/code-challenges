@@ -34,7 +34,7 @@ test("It should sort high-to-low the numbers in an array", (assert) => {
   assert.deepEqual(sortBackwards([1]), [1]);
 });
 
-skip("It should sort strings alphabetically", (assert) => {
+test("It should sort strings alphabetically", (assert) => {
   assert.deepEqual(alphabetize(["alphabet", "Zebra", "Alphabet", "carrot"]), [
     "Alphabet",
     "Zebra",
