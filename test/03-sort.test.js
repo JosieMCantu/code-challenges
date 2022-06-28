@@ -107,7 +107,7 @@ test("It should sort numbers by their length", (assert) => {
   assert.ok(sameLength.includes(3));
 });
 
-skip("It should sort people by their last names", (assert) => {
+test("It should sort people by their last names", (assert) => {
   const people = [
     new Person("Wes", "Washington", 25),
     new Person("Casey", "Carson", 38),

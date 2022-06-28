@@ -82,11 +82,15 @@ Write a function named sortPeople that takes in an array of Person objects, each
 ------------------------------------------------------------------------------------------------ */
 
 export class Person {
-  // Solution code here...
+  constructor(firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
 }
 
 export const sortPeople = (arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => a.lastName.localeCompare(b.lastName));
 };
 
 /* ------------------------------------------------------------------------------------------------
