@@ -126,7 +126,7 @@ test("It should sort people by their last names", (assert) => {
   );
 });
 
-skip("It should sort people with more strict ordering", (assert) => {
+test("It should sort people with more strict ordering", (assert) => {
   const family = [
     new Person("Casey", "Casems", 55),
     new Person("Casey", "Casems", 37),
