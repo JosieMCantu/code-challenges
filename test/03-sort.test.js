@@ -49,7 +49,7 @@ test("It should sort strings alphabetically", (assert) => {
   assert.deepEqual(alphabetize([]), []);
 });
 
-skip("It should sort strings by length", (assert) => {
+test("It should sort strings by length", (assert) => {
   const ans = sortByLength(["alphabet", "zebra", "elephants", "carrot"]);
   assert.deepEqual(ans, ["zebra", "carrot", "alphabet", "elephants"]);
   assert.deepEqual(sortByLength(["a", "bc", ""]), ["", "a", "bc"]);
